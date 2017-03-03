@@ -8,7 +8,7 @@ I've trained a convolutional neural network to discern between natural & and man
 [Architecture](#architecture)
 [Scores](#scores)
 [Fun Tests!](#'fun tests!')
-[Next Steps](#'next steps')
+[Next Steps](#next steps)
 
 
 ## Motivation
