@@ -17,9 +17,9 @@ I've trained a convolutional neural network to discern between natural & and man
 ## Motivation
 Viewing Earth from above can give us an amazing and very different perspective on the changes going on in the world. We can monitor land use, reconnoiter areas of conflict, and survey natural disaster areas to find the best ways to bring in assistance...and, in the future, explore new planets for signs of life.
 
-<p align="center">
-    <img src="images/Cropped_Images.gif" width=100% height=100% alt="Full Satellite Images gif"/> 
-</p>
+<!-- <p align="center">
+    <img src="" width=100% height=100% alt="Full Satellite Images gif"/> 
+</p> -->
 
 ## Dataset
 I gleaned 6,700 images from Googlemaps, manually and using the Google API with some scripting.  The images in my training and test sets come from around the world and contain a variety of natural settings, including forests, rivers, mountains, deserts, beaches, and ice and snow.
