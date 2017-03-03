@@ -7,7 +7,7 @@ I've trained a convolutional neural network to discern between natural & and man
 [Pre-Processing](#pre-processing)
 [Architecture](#architecture)
 [Scores](#scores)
-[Fun Tests!](#fun-tests!)
+[Fun Tests](#fun-tests)
 [Next Steps](#next-steps)
 
 
