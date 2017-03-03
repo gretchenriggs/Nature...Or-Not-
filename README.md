@@ -39,13 +39,23 @@ The convolutional neural network (CNN) can learn that hard fixed lines and shape
 
 Here's the CNN I've built to detect these features in my extracted images:
 
+--> Will input image of the CNN architecture I built and go over how CNN's work and what each step is doing.
 
-My final model contained:#
-<ul>
-  3 Convolutional Layers
-
-</ul>
-
+CONV2D - 32 filters, 3x3
+Activation - RELU (Rectified Linear Unit)
+CONV2D - 32 filters, 3x3
+RELU
+MaxPooling - 2x2 (Desampling)
+DropOut -> 0.5
+CONV2D - 64 filters, 3x3
+RELU
+MaxPooling - 2x2 (Desampling)
+Flatten
+Dense Layer - 512 neurons
+RELU
+DropOut -> 0.5
+Dense Layer - 2 neurons (# of classes)
+SoftMax - classification based on prob, probs add up to 1
 
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
