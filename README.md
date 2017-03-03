@@ -10,6 +10,7 @@ I've trained a convolutional neural network to discern between natural & and man
 - [Fun Tests](#fun-tests)
 - [Next Steps](#next-steps)
 
+--> Will put some cool photo up...or .gif file...
 
 ## Motivation
 Viewing Earth from above can give us an amazing and very different perspective on the changes going on in the world. We can monitor land use, reconnoiter areas of conflict, and survey natural disaster areas to find the best ways to bring in assistance...and, in the future, explore new planets for signs of life.
@@ -22,6 +23,8 @@ The original collected images were quite large, 1152x864x3, which requires more 
 The labeling for these images was done by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
 
 I was able to augment the 6,700 labeled images by taking the 90, 180, and 270 degree rotations of the image, as well as creating mirror images of these 4 rotations.  This created 8 total sets of usable data, for a total of 53,600 images.
+
+--> For time being, show Jupyter notebook.  Maybe tab on final webpage for presentation (running locally)
 
 ## Pre-Processing
 The feature (X) values in my dataset are the RGB values of the pixels.  Thus, X is a 124x124x3 array of RGB pixel values.
@@ -81,9 +84,11 @@ More close to home, I also ran a subset of images from Rocky Mountain National P
 
 --> Post results...
 
+--> Again, put in some Moon, Mars, Nat'l Park images
+
 ## Next Steps
 Now that I've created a model to predict a binary classification for satellite images, I'd like to go deeper and try to classify portions of the images as natural vs. man-made.
 
 Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
 
-
+--> End on some snappier note...gotta think about it
