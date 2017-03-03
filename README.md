@@ -4,6 +4,7 @@ I've trained a convolutional neural network to discern between natural & and man
 ## Table of Contents
 [Motivation](#motivation)
 [Dataset](#dataset)
+[Pre-Processing](#pre-processing)
 [Architecture](#architecture)
 [Scores](#scores)
 [Fun Tests!](#fun tests!)
@@ -19,6 +20,13 @@ I gleaned 6,700 images from Googlemaps, manually and using the Google API with s
 The original saved out images were quite large, 1152x864x3, which requires more memory than most GPUs can handle, so they were cut down to 124x124x3 using python's PIL library.
 
 The labeling for these images was done by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
+
+## Pre-Processing
+The feature (X) values in my dataset are the RGB values of the pixels.  Thus, X is a 124x124x3 array of RGB pixel values.
+
+The data was broken into a Training and a Test set, consisting of 80% and 20% of the data, respectively.
+
+Next, the RGB pixel values were normalized from 1-255 to 0-1 by dividing by 255, and centered around 0, by subtracting the mean of the X training data pixel values.  The mean pixel values for the R, G, & B components were consistent with each other, so the decision was made to use the mean of all 3 channels together to subtract from the data.
 
 ## Architecture
 The convolutional neural network (CNN) can learn that hard fixed lines and shapes, discerned from greater pixel differentiation, are more likely to be man-made objects, whereas images with less pixel differentiation, hence softer edges, are more likely to come from a natural setting. Brighter and more uniform colors are generally more likely to come from man-made objects. And very regular patterns, some that may be indiscernable to the human eye, are more likely to be manufactured by mankind.
