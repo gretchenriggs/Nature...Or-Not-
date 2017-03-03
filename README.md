@@ -2,13 +2,13 @@
 I've trained a convolutional neural network to discern between natural & and man-made structures in satellite images from around the globe (and extra-terrestrial globes).
 
 ## Table of Contents
-[Motivation](#motivation)
-[Dataset](#dataset)
-[Pre-Processing](#pre-processing)
-[Architecture](#architecture)
-[Scores](#scores)
-[Fun Tests](#fun-tests)
-[Next Steps](#next-steps)
+### [Motivation](#motivation)
+### [Dataset](#dataset)
+### [Pre-Processing](#pre-processing)
+### [Architecture](#architecture)
+### [Scores](#scores)
+### [Fun Tests](#fun-tests)
+### [Next Steps](#next-steps)
 
 
 ## Motivation
