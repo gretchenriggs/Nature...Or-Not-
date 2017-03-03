@@ -41,21 +41,21 @@ Here's the CNN I've built to detect these features in my extracted images:
 
 --> Will input image of the CNN architecture I built and go over how CNN's work and what each step is doing.
 
-CONV2D - 32 filters, 3x3
-Activation - RELU (Rectified Linear Unit)
-CONV2D - 32 filters, 3x3
-RELU
-MaxPooling - 2x2 (Desampling)
-DropOut -> 0.5
-CONV2D - 64 filters, 3x3
-RELU
-MaxPooling - 2x2 (Desampling)
-Flatten
-Dense Layer - 512 neurons
-RELU
-DropOut -> 0.5
-Dense Layer - 2 neurons (# of classes)
-SoftMax - classification based on prob, probs add up to 1
+CONV2D - 32 filters, 3x3<br>
+Activation - RELU (Rectified Linear Unit)<br>
+CONV2D - 32 filters, 3x3<br>
+RELU<br>
+MaxPooling - 2x2 (Desampling)<br>
+DropOut -> 0.5<br>
+CONV2D - 64 filters, 3x3<br>
+RELU<br>
+MaxPooling - 2x2 (Desampling)<br>
+Flatten<br>
+Dense Layer - 512 neurons<br>
+RELU<br>
+DropOut -> 0.5<br>
+Dense Layer - 2 neurons (# of classes)<br>
+SoftMax - classification based on prob, probs add up to 1<br>
 
 Computed using Adadelta Gradient Descent optimizer.
 
