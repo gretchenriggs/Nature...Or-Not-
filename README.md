@@ -57,6 +57,8 @@ DropOut -> 0.5
 Dense Layer - 2 neurons (# of classes)
 SoftMax - classification based on prob, probs add up to 1
 
+Computed using Adadelta Gradient Descent optimizer.
+
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
 ## Scores
