@@ -4,7 +4,6 @@ I've trained a convolutional neural network to discern between natural & and man
 ## Table of Contents
 [Motivation](#motivation)
 [Dataset](#dataset)
-[Process](#process)
 [Architecture](#architecture)
 [Scores](#scores)
 [Fun Tests!](#fun tests!)
@@ -21,9 +20,16 @@ The original saved out images were quite large, 1152x864x3, which requires more 
 
 The labeling for these images was done by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
 
-## Process
-The neural network should be able to learn that hard fixed lines and shapes, discerned from greater pixel differentiation are more likely to be man-made objects, whereas images with less pixel differentiation, softer edges, are more likely to be from a natural setting. Also, brighter colors, along with the pixel differences, are more likely to come from man-made objects. 
+## Architecture
+The convolutional neural network (CNN) can learn that hard fixed lines and shapes, discerned from greater pixel differentiation, are more likely to be man-made objects, whereas images with less pixel differentiation, hence softer edges, are more likely to come from a natural setting. Brighter and more uniform colors are generally more likely to come from man-made objects. And very regular patterns, some that may be indiscernable to the human eye, are more likely to be manufactured by mankind.
+
+Here's the CNN I've built to detect these features in my extracted images:
 
 
+My final model contained:
+<ul>
+  3 Convolutional Layers
+
+</ul>
 
 Check Out Galvanize -->
