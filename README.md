@@ -11,6 +11,7 @@ I've trained a convolutional neural network to discern between natural & and man
 - [Next Steps](#next-steps)
 
 --> Will put some cool photo up...or .gif file...
+<img alt="Image Prediction .gif" src="images/lsLabeling_Nat_or_Not.gif" width=250>  
 
 ## Motivation
 Viewing Earth from above can give us an amazing and very different perspective on the changes going on in the world. We can monitor land use, reconnoiter areas of conflict, and survey natural disaster areas to find the best ways to bring in assistance...and, in the future, explore new planets for signs of life.
