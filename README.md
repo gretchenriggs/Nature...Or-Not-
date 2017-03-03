@@ -30,11 +30,9 @@ The data was broken into a Training and a Test set, consisting of 80% and 20% of
 
 Next, the RGB pixel values were normalized from 1-255 to 0-1 by dividing by 255, and centered around 0, by subtracting the mean of the X training data pixel values.  The mean pixel values for the R, G, & B components were consistent with each other, so the decision was made to use the mean of all 3 channels together to subtract from the data.
 
-The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices.  
-    For example, input label vector: [[1],                  Output label vector: [[0, 1],
-                                      [0],                                        [1, 0],
-                                      [0],                                        [1, 0],
-                                      [1]]                                        [0, 1]]
+The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices.<br>
+    For example, the entry [0] becomes [1, 0] and the entry [1] becomes [0, 1]. 
+    
 
 ## Architecture
 The convolutional neural network (CNN) can learn that hard fixed lines and shapes, discerned from greater pixel differentiation, are more likely to be man-made objects, whereas images with less pixel differentiation, hence softer edges, are more likely to come from a natural setting. Brighter and more uniform colors are generally more likely to come from man-made objects. And very regular patterns, some that may be indiscernable to the human eye, are more likely to be manufactured by mankind.
