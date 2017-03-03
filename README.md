@@ -55,7 +55,6 @@ The neural network I trained in the past few weeks was able to achieve an 83% le
 --> Mention Precision, Recall, F1-Score, as well.  Perhaps an ROC plot and AUC value.
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
 
-<p id="Fun Tests">Fun Tests!</p>
 ## Fun Tests!
 As I hinted at previously, this technology could be used in predicting if there is intelligent life outside of Earth by observing large volumes of satellite imagery and finding patterns it recognizes as being unnatural.
 
