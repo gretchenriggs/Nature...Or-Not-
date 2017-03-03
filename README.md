@@ -66,3 +66,9 @@ More close to home, I also ran a subset of images from Rocky Mountain National P
 
 --> Post results...
 
+## Next Steps
+Now that I've created a model to predict a binary classification for satellite images, I'd like to go deeper and try to classify portions of the images as natural vs. man-made.
+
+Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
+
+
