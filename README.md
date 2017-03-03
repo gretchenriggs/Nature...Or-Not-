@@ -41,6 +41,9 @@ Here's the CNN I've built to detect these features in my extracted images:
 
 --> Will input image of the CNN architecture I built and go over how CNN's work and what each step is doing.
 
+Batch Size = 32
+Number of Epochs = 20
+
 CONV2D - 32 filters, 3x3<br>
 Activation - RELU (Rectified Linear Unit)<br>
 CONV2D - 32 filters, 3x3<br>
