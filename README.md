@@ -51,15 +51,15 @@ Here's the CNN I've built to detect these features in my extracted images:
 <img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
 <img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
-Batch Size = 32
-Number of Epochs = 20 - Iterations of Forward and Back Propagations
+Batch Size = 32<br>
+Number of Epochs = 20 - Iterations of Forward and Back Propagations<br>
 
-Computed using Adadelta Gradient Descent optimizer.
+The neural net's gradient descent is computed using the Adadelta Gradient Descent optimizer.
 
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
 ## Scores
-The neural network I trained in the past few weeks was able to achieve an 83% level of accuracy on the test images it predicted on, compared to a 93% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.
+The neural network I trained in the past few weeks was able to achieve an 85% level of accuracy on the test images it predicted on, compared to a 97% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.
 
 --> Mention Precision, Recall, F1-Score, as well.  Perhaps an ROC plot and AUC value.
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
