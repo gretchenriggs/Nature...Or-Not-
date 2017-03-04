@@ -48,10 +48,8 @@ The convolutional neural network (CNN) can learn that hard fixed lines and shape
 
 Here's the CNN I've built to detect these features in my extracted images:
 
-<p align="center">
-    <img src="images/Architecture_temp.png" width=100% height=100% alt="CNN Architecture gif"/> 
-</p>
-
+<img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
+<img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
 --> Will input image of the CNN architecture I built and go over how CNN's work and what each step is doing.
 
