@@ -51,26 +51,8 @@ Here's the CNN I've built to detect these features in my extracted images:
 <img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
 <img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
---> Will input image of the CNN architecture I built and go over how CNN's work and what each step is doing.
-
 Batch Size = 32
-Number of Epochs = 20
-
-CONV2D - 32 filters, 3x3<br>
-Activation - RELU (Rectified Linear Unit)<br>
-CONV2D - 32 filters, 3x3<br>
-RELU<br>
-MaxPooling - 2x2 (Desampling)<br>
-DropOut -> 0.5<br>
-CONV2D - 64 filters, 3x3<br>
-RELU<br>
-MaxPooling - 2x2 (Desampling)<br>
-Flatten<br>
-Dense Layer - 512 neurons<br>
-RELU<br>
-DropOut -> 0.5<br>
-Dense Layer - 2 neurons (# of classes)<br>
-SoftMax - classification based on prob, probs add up to 1<br>
+Number of Epochs = 20 - Iterations of Forward and Back Propagations
 
 Computed using Adadelta Gradient Descent optimizer.
 
