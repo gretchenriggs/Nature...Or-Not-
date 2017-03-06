@@ -35,7 +35,7 @@ The labeling for these images was done by hand, labeled 0 for images containing 
 I was able to augment the 6,700 labeled images by taking the 90, 180, and 270 degree rotations of the image, as well as creating mirror images of these 4 rotations.  This created 8 total sets of usable data, for a total of 53,600 images.
 
 <p align="center">
-    <img src="images/Image_to_Rot_Mirror.png" width=80% height=80% alt="Rotation Image photos png"/> 
+    <img src="images/rotation_mirror.png" width=80% height=80% alt="Rotation Image photos png"/> 
 </p>
 
 ## Pre-Processing
