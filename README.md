@@ -47,7 +47,7 @@ Next, the RGB pixel values were normalized from 1-255 to 0-1 by dividing by 255,
 
 The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices: 
 <p align="center">
-    <img src="images/label_upd.png"  width=50% height=50% alt="Transforming Labels to Binary Class Matrices pic"/>
+    <img src="images/label_upd.png"  width=30% height=30% alt="Transforming Labels to Binary Class Matrices pic"/>
 </p>
 The vector entry [0] becomes [1, 0] and the entry [1] becomes [0, 1]. 
 
