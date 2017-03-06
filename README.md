@@ -103,13 +103,11 @@ To test this idea, I captured some images from Google Mars and Google Moon to se
 
 More close to home, I also ran a subset of images from Rocky Mountain National Park through the prediction to get an estimate of how much of the Park contained man-made structure.
 
---> Post results...
-
---> Again, put in some Moon, Mars, Nat'l Park images
+--> Post results of Rocky Mtn Nat'l Park
 
 ## Next Steps
 Now that I've created a model to predict a binary classification for satellite images, I'd like to go deeper and try to classify portions of the images as natural vs. man-made.
 
 Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
 
---> End on some snappier note...gotta think about it
+And, it would be interesting to see if I could improve the Google Moon and Google Mars prediction results by training on gray scale images of the Earth.  Then we could learn, as Fox Mulder says, if "the truth is out there"...
