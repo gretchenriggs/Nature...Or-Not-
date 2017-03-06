@@ -49,7 +49,6 @@ The labels (y) values also need some preperation before being fed into the neura
 <p align="center">
     <img src="images/label_upd.png"  width=30% height=30% alt="Transforming Labels to Binary Class Matrices pic"/>
 </p>
-The vector entry [0] becomes [1, 0] and the entry [1] becomes [0, 1]. 
 
 Lastly, for ease in dealing with the order of my input matrices, though I was using Theano as my backend for the neural network, I used the tf (TensorFlow) option for dimension order, which expects the data to be in (# of images) x (# of rows) x (# of columns) x (# of channels) order.  Since this is the usual ordering of my image data, 53600 x 124 x 124 x 3, this worked out nicely.  The default Theano dimension ordering is (# of images) x (# of channels) x (# of rows) x (# of columns), which would have been 53600 x 3 x 124 x 124.
     
@@ -69,9 +68,13 @@ The neural net's gradient descent is computed using the Adadelta Gradient Descen
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
 ## Scores
-The neural network I trained in the past few weeks was able to achieve an 85% level of accuracy on the test images it predicted on, compared to a 97% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.  The test dataset's precision was 85%, the recall was 83%, and the F1-Score was 85%
+The neural network I trained in the past few weeks was able to achieve an 85% level of accuracy on the test images it predicted on, compared to a 97% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.
 
---> Mention Precision, Recall, F1-Score, as well.  Perhaps an ROC plot and AUC value.
+<p align="center"> 
+    <img src="images/results.png" width=100% height=100% alt="pic of Accuracy/Precision/Recall/F1-Score results"/>
+</p>
+
+--> Perhaps an ROC plot and AUC value.
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
 
 ## Fun Tests!
