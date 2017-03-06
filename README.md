@@ -26,11 +26,17 @@ I gleaned 6,700 images from Googlemaps, manually and using the Google API with s
 
 The original collected images were quite large, 1152x864x3, which requires more memory than most GPUs can handle, so they were cut down to 124x124x3 using python's PIL library.
 
+<p align="center">
+    <img src="images/Image_Preproc.gif" width=100% height=100% alt="Cropping Image photos gif"/> 
+</p>
+
 The labeling for these images was done by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
 
 I was able to augment the 6,700 labeled images by taking the 90, 180, and 270 degree rotations of the image, as well as creating mirror images of these 4 rotations.  This created 8 total sets of usable data, for a total of 53,600 images.
 
---> For time being, show Jupyter notebook.  Maybe tab on final webpage for presentation (running locally)
+<p align="center">
+    <img src="images/Image_to_Rot_Mirror.png" width=80% height=80% alt="Rotation Image photos png"/> 
+</p>
 
 ## Pre-Processing
 The feature (X) values in my dataset are the RGB values of the pixels.  Thus, X is a 124x124x3 array of RGB pixel values.
