@@ -94,7 +94,6 @@ The neural network I trained in the past few weeks was able to achieve an 85% le
     <img src="images/results.png" width=100% height=100% alt="pic of Accuracy/Precision/Recall/F1-Score results"/>
 </p>
 
---> Perhaps an ROC plot and AUC value.
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
 
 ## Fun Tests!
