@@ -83,10 +83,7 @@ Another pass of Dropout is applied, again randomly setting 50% of the input unit
 
 And lastly, the Softmax function is applied to the data to obtain a probability used to classify the image as containing only nature or containing man-made objects.  Softmax is a generalization of the logistic function which ensures the resulting probabilities sum to 1.0.
 
-Batch Size = 32<br>
-Number of Epochs = 20 - Iterations of Forward and Back Propagations<br>
-
-The neural net's gradient descent is computed using the Adadelta Gradient Descent optimizer.
+The CNN went through 20 epochs, iterations of forward and backward propagations, while training.  And a batch size of 32 was used for gradient descent, along with the Adadelta gradient descent optimizer.  The learning rate dynamically adapts over time using this method.
 
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
