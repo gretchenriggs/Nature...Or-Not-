@@ -99,7 +99,7 @@ Taking a look at some of the incorrect predictions, it's easy to see why the neu
 Some of the man-made pictures may appear to be more natural because a barely-seen path through trees is hard for the network to detect, as well as the pattern of fruit trees in an orchard or even some low-resolution images of a town.  The fuzziness makes the edges of the buildings not as distinct.
 
 <p align="center"> 
-    <img src="images/false_manmade_false_nature.png" width=100% height=100% alt="pic of False Manmade and False Nature images"/>
+    <img src="images/false_manmade_false_nature.png" width=80% height=80% alt="pic of False Manmade and False Nature images"/>
 </p>
 
 
