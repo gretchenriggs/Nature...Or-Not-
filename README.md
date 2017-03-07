@@ -53,6 +53,12 @@ The labels (y) values also need some preperation before being fed into the neura
 Lastly, for ease in dealing with the order of my input matrices, though I was using Theano as my backend for the neural network, I used the tf (TensorFlow) option for dimension order, which expects the data to be in (# of images) x (# of rows) x (# of columns) x (# of channels) order.  Since this is the usual ordering of my image data, 53600 x 124 x 124 x 3, this worked out nicely.  The default Theano dimension ordering is (# of images) x (# of channels) x (# of rows) x (# of columns), which would have been 53600 x 3 x 124 x 124.
     
 ## Architecture
+Why use a convolutional neural net (CNN)?<br>
+
+Traditional neural networks are fully connected, meaning every neuron in one layer is connected to every neuron in the next layer.  The number of neurons and weights to learn adds up quickly.<br>
+
+With a convolutional neural network, the neurons in each layer are sparsely connected and the weights are often shared.  This is achieved by using a filter (kernel), usually of size 3x3 or 5x5, that "slides" over the image and is convolved with only the window it is associated with at each stride.  The stride of the window usually is 1 or 2 pixels, so there is some overlap between windows.  The output of the convolution is a feature map for each specified number of filters used.
+
 The convolutional neural network (CNN) can learn that hard fixed lines and shapes, discerned from greater pixel differentiation, are more likely to be man-made objects, whereas images with less pixel differentiation, hence softer edges, are more likely to come from a natural setting. Brighter and more uniform colors are generally more likely to come from man-made objects. And very regular patterns, some that may be indiscernable to the human eye, are more likely to be manufactured by mankind.
 
 Here's the CNN I've built to detect these features in my extracted images:
@@ -60,10 +66,24 @@ Here's the CNN I've built to detect these features in my extracted images:
 <img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
 <img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
-Batch Size = 32<br>
-Number of Epochs = 20 - Iterations of Forward and Back Propagations<br>
+My CNN starts of with Input Layer being convolved with 32-3x3 filters in the CNN's first convolutional layer to create 32 feature maps. 
+The activation function RELU (Rectified Linear Unit), which takes any negative values and maps them to 0, is then applied.
+These feature maps are then convolved again with another set of 32-3x3 filters, creating an additional 32 feature maps.  This is followed by another application of RELU.
 
-The neural net's gradient descent is computed using the Adadelta Gradient Descent optimizer.
+Next, the feature maps are desampled using MaxPooling, which uses a 2x2 filter that takes the Max pixel value of the 4 pixels included in each computation over the feature maps.  This reduces the spatial size of the representation by 75% and also prevents overfitting.
+
+I follow the MaxPooling with a Dropout of 0.5, which consists of randomly setting 50% of the input units to 0 at each update.  This also helps in preventing overfitting.
+
+Another convolutional layer comes next, using a filter size of 3x3, but this time applying 64 filter values, creating 64 feature maps, followed by another application of RELU.
+MaxPooling is applied after this layer, taking the 64-62x62x64 feature maps and desampling them to 64-31x31x64 feature maps.
+
+This layer is followed up by a Dense Layer, which flattens the feature maps into a 512 neuron row vector with full connectivity, as seen in traditional neural networks.
+
+Another pass of Dropout is applied, again randomly setting 50% of the input units to 0.
+
+And lastly, the Softmax function is applied to the data to obtain a probability used to classify the image as containing only nature or containing man-made objects.  Softmax is a generalization of the logistic function which ensures the resulting probabilities sum to 1.0.
+
+The CNN went through 20 epochs, iterations of forward and backward propagations, while training.  And a batch size of 32 was used for gradient descent, along with the Adadelta gradient descent optimizer.  The learning rate dynamically adapts over time using this method.
 
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
@@ -82,17 +102,19 @@ As I hinted at previously, this technology could be used in predicting if there 
 
 To test this idea, I captured some images from Google Mars and Google Moon to see if the CNN model could correctly predict if the images only contained natural objects.  Would the learning the model did on desert regions of the Earth be enough for it to make accurate predictions about the otherworldly images from the near cosmos?  Or perhaps find where E.T. and his buddies live?
 
---> Post results...dun dun duuunnnnn
+<p align="center">
+    <img src="images/google_moon_mars.png" width=100% height=100% alt="Google Moon and Google Mars pics"/>
+</p>
+
+...well...it still remains to be seen.  The Earth-prediction model could only predict about 50% of the images from the Moon and Mars as natural.  This is most likely because of the gray scale images attained and perhaps because of the many regular-appearing crater shapes.  Or, could it be that aliens do inhabit these nearby celestial bodies??  Dun, dun, dunnnn...
 
 More close to home, I also ran a subset of images from Rocky Mountain National Park through the prediction to get an estimate of how much of the Park contained man-made structure.
 
---> Post results...
-
---> Again, put in some Moon, Mars, Nat'l Park images
+--> Post results of Rocky Mtn Nat'l Park
 
 ## Next Steps
 Now that I've created a model to predict a binary classification for satellite images, I'd like to go deeper and try to classify portions of the images as natural vs. man-made.
 
 Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
 
---> End on some snappier note...gotta think about it
+And, it would be interesting to see if I could improve the Google Moon and Google Mars prediction results by training on gray scale images of the Earth.  Then we could learn, as Fox Mulder says, if "the truth is out there"...
