@@ -45,7 +45,7 @@ The data was broken into a Training and a Test set, consisting of 80% and 20% of
 
 Next, the RGB pixel values were normalized from 1-255 to 0-1 by dividing by 255, and centered around 0, by subtracting the mean of the X training data pixel values.  The mean pixel values for the R, G, & B components were consistent with each other, so the decision was made to use the mean of all 3 channels together to subtract from the data.
 
-The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices: 
+The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as a 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices: 
 <p align="center">
     <img src="images/label_upd.png"  width=30% height=30% alt="Transforming Labels to Binary Class Matrices pic"/>
 </p>
@@ -94,7 +94,6 @@ The neural network I trained in the past few weeks was able to achieve an 85% le
     <img src="images/results.png" width=100% height=100% alt="pic of Accuracy/Precision/Recall/F1-Score results"/>
 </p>
 
---> Perhaps an ROC plot and AUC value.
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
 
 ## Fun Tests!
@@ -118,3 +117,7 @@ Now that I've created a model to predict a binary classification for satellite i
 Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
 
 And, it would be interesting to see if I could improve the Google Moon and Google Mars prediction results by training on gray scale images of the Earth.  Then we could learn, as Fox Mulder says, if "the truth is out there"...
+
+<p align="center">
+    <img src="images/Xfiles.gif" width=50% height=50% alt="X-files gif"/>
+</p>
