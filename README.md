@@ -94,6 +94,15 @@ The neural network I trained in the past few weeks was able to achieve an 85% le
     <img src="images/results.png" width=100% height=100% alt="pic of Accuracy/Precision/Recall/F1-Score results"/>
 </p>
 
+Taking a look at some of the incorrect predictions, it's easy to see why the neural net had some problems.  Some rivers look like roads, some glaciers have some linear features, and there are some areas of high contrasting colors, such as the edge of a lake which all have characteristics of man-made objects.
+
+Some of the man-made pictures may appear to be more natural because a barely-seen path through trees is hard for the network to detect, as well as the pattern of fruit trees in an orchard or even some low-resolution images of a town.  The fuzziness makes the edges of the buildings not as distinct.
+
+<p align="center"> 
+    <img src="images/false_manmade_false_nature.png" width=100% height=100% alt="pic of False Manmade and False Nature images"/>
+</p>
+
+
 --> Show some images it didn't predict correctly to see if can reason why the net had a problem with them
 
 ## Fun Tests!
