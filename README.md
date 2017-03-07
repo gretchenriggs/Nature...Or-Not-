@@ -74,7 +74,14 @@ Next, the feature maps are desampled using MaxPooling, which uses a 2x2 filter t
 
 I follow the MaxPooling with a Dropout of 0.5, which consists of randomly setting 50% of the input units to 0 at each update.  This also helps in preventing overfitting.
 
-Another convolutional layer comes next, using a filter size of 3x3, but this time applying 64 filter values, creating 64 feature maps.
+Another convolutional layer comes next, using a filter size of 3x3, but this time applying 64 filter values, creating 64 feature maps, followed by another application of RELU.
+MaxPooling is applied after this layer, taking the 64-62x62x64 feature maps and desampling them to 64-31x31x64 feature maps.
+
+This layer is followed up by a Dense Layer, which flattens the feature maps into a 512 neuron row vector with full connectivity, as seen in traditional neural networks.
+
+Another pass of Dropout is applied, again randomly setting 50% of the input units to 0.
+
+And lastly, the Softmax function is applied to the data to obtain a probability used to classify the image as containing only nature or containing man-made objects.  Softmax is a generalization of the logistic function which ensures the resulting probabilities sum to 1.0.
 
 Batch Size = 32<br>
 Number of Epochs = 20 - Iterations of Forward and Back Propagations<br>
