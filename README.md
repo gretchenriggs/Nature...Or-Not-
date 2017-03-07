@@ -118,3 +118,7 @@ Now that I've created a model to predict a binary classification for satellite i
 Also, bringing in more training data and further tuning of the neural nets hyperparameters could improve the model results, as could going deeper, creating more hidden layers to learn an even greater number of features.
 
 And, it would be interesting to see if I could improve the Google Moon and Google Mars prediction results by training on gray scale images of the Earth.  Then we could learn, as Fox Mulder says, if "the truth is out there"...
+
+<p align="center">
+    <img src="images/Xfiles.gif" width=100% height=100% alt="X-files gif"/>
+</p>
