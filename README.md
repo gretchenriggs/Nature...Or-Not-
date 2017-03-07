@@ -66,12 +66,15 @@ Here's the CNN I've built to detect these features in my extracted images:
 <img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
 <img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
-My CNN starts of with Input Layer being convolved with 32-3x3 filters to create 32 feature maps.
-These feature maps are then convolved again with another set of 32-3x3 filters, creating an additional 32 feature maps.
+My CNN starts of with Input Layer being convolved with 32-3x3 filters in the CNN's first convolutional layer to create 32 feature maps. 
+The activation function RELU (Rectified Linear Unit), which takes any negative values and maps them to 0, is then applied.
+These feature maps are then convolved again with another set of 32-3x3 filters, creating an additional 32 feature maps.  This is followed by another application of RELU.
 
-Next the feature maps are desampled using MaxPooling, which uses a 2x2 filter that takes the Max pixel value of the 4 pixels included in each computation over the feature maps.  This reduces the spatial size of the representation and also prevents overfitting.
+Next, the feature maps are desampled using MaxPooling, which uses a 2x2 filter that takes the Max pixel value of the 4 pixels included in each computation over the feature maps.  This reduces the spatial size of the representation by 75% and also prevents overfitting.
 
+I follow the MaxPooling with a Dropout of 0.5, which consists of randomly setting 50% of the input units to 0 at each update.  This also helps in preventing overfitting.
 
+Another convolutional layer comes next, using a filter size of 3x3, but this time applying 64 filter values, creating 64 feature maps.
 
 Batch Size = 32<br>
 Number of Epochs = 20 - Iterations of Forward and Back Propagations<br>
