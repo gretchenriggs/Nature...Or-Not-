@@ -11,7 +11,7 @@ I've trained a convolutional neural network to recognize the presence of man-mad
 - [Next Steps](#next-steps)
 
 <p align="center">
-    <img src="images/Labeling_Nat_or_Not.gif" width=100% height=100% alt="Image Predictions gif"/> 
+    <img src="images/nature_not.gif" width=100% height=100% alt="Image Predictions gif"/> 
 </p>
 
 ## Motivation
@@ -99,7 +99,7 @@ Taking a look at some of the incorrect predictions, it's easy to see why the neu
 In the images incorrectly predicted as containing man-made objects, some rivers look like roads, some glaciers have some linear features, and there are some areas of high contrasting colors, such as the edge of a lake which all have characteristics of man-made objects.
 
 <p align="center"> 
-    <img src="images/false_manmade_false_nature.png" width=80% height=80% alt="pic of False Manmade and False Nature images"/>
+    <img src="images/false_manmade_false_nature.png" width=80% height=80% alt="pic of False Man-made and False Nature images"/>
 </p>
 
 Having a larger collection of input data with enough variation may produce better results for images like these.  
