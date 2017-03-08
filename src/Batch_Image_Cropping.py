@@ -1,6 +1,6 @@
 from PIL import Image
 
-# Creating list of Images obtained from GoogleMaps for Cropping
+# Creating list of Images obtained from Google Maps for Cropping
 image_list =["Screenshot from 2016-12-29 14-02-31.png",
 "Screenshot from 2016-12-29 14-03-00.png",
 "Screenshot from 2016-12-29 14-03-35.png",
@@ -1219,7 +1219,7 @@ image_list =["Screenshot from 2016-12-29 14-02-31.png",
 print "Processing {0} pictures into a total of {1} cropped images..."\
                   .format(len(image_list), len(image_list)*8)
 
-# Splitting 1152x864 image into (8) 125x125 pieces
+# Splitting 1152x864 image into (8) 124x124 pieces
 # Have potential for 32 images for each picture, but just saving out 2nd row
 #   of 8 cropped pictures
 

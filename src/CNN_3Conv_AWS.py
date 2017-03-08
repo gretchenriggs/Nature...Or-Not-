@@ -1,6 +1,6 @@
 ''' Running CNN to classify satellite images as containing only natural
     objects (0) or containing some man-made objects (1).
-    Using Theano with Tensorflow image_dim_ordering :
+    Using Theano with TensorFlow image_dim_ordering :
     (# images, # rows, # cols, # channels)
     (53600, 124, 124, 3) for the X images below
 '''
@@ -246,7 +246,7 @@ if __name__ == '__main__':
     features6 = 'X_arr_6700_deg180mir.pkl'
     features7 = 'X_arr_6700_deg270.pkl'
     features8 = 'X_arr_6700_deg270mir.pkl'
-    labels = 'Image_Labels_125x125_53600.txt'
+    labels = 'Image_Labels_124x124_53600.txt'
     X1 = get_X_from_bucket(features1)
     X2 = get_X_from_bucket(features2)
     X3 = get_X_from_bucket(features3)
@@ -275,7 +275,7 @@ if __name__ == '__main__':
                                   X_train.shape[3]
 
     # Prep input for Keras
-    # For Tensorflow dim_ordering (tf), (# images, # rows, # cols, # chans)
+    # For TensorFlow dim_ordering (tf), (# images, # rows, # cols, # chans)
     # For Theano dim ordering (th), (# images, # chans, # rows, # cols)
     # Used Theano backend, tf dim_ordering for this project
     X_train, X_test, input_shape = keras_inp_prep(X_train, X_test,\
