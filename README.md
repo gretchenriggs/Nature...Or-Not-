@@ -30,7 +30,7 @@ The original collected images were quite large, 1152x864x3, which requires more 
     <img src="images/Image_Preproc.gif" width=100% height=100% alt="Cropping Image photos gif"/> 
 </p>
 
-The labeling for these images was done by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
+The labeling for these images was performed by hand, labeled 0 for images containing only nature and 1 for images containing any man-made object. I've included plowed fields as man-made objects, as the patterns rendered by the plow are more closely related to other man-made objects than to that of nature. And technically, these shapes are man-made.
 
 I was able to augment the 6,700 labeled images by taking the 90, 180, and 270 degree rotations of the image, as well as creating mirror images of these 4 rotations.  This created 8 total sets of usable data, for a total of 53,600 images.
 
@@ -45,7 +45,7 @@ The data was broken into a Training and a Test set, consisting of 80% and 20% of
 
 Next, the RGB pixel values were normalized from 1-255 to 0-1 by dividing by 255, and centered around 0, by subtracting the mean of the X training data pixel values.  The mean pixel values for the R, G, & B components were consistent with each other, so the decision was made to use the mean of all 3 channels together to subtract from the data.
 
-The labels (y) values also need some preperation before being fed into the neural net.  The labeled y data is read into the Python script as a 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices: 
+The labels (y) values also need some preparation before being fed into the neural net.  The labeled y data is read into the Python script as a 1D array (vector) of 0's and 1's.  Keras, the neural networks library used, running on top of Theano for this network, required the labels to be converted to binary class matrices: 
 <p align="center">
     <img src="images/label_upd.png"  width=30% height=30% alt="Transforming Labels to Binary Class Matrices pic"/>
 </p>
