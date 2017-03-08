@@ -88,7 +88,7 @@ The CNN went through 20 epochs, iterations of forward and backward propagations,
 Due to size of this dataset and the architecture of the neural network, this project was brought up onto the AWS Cloud to run on a GPU instance with 32 virtual CPU instances and 60 GB of Memory.
 
 ## Scores
-The neural network I trained in the past few weeks was able to achieve an 85% level of accuracy on the test images it predicted on, compared to a 97% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.
+The neural network was able to achieve an 85% level of accuracy on the test images it predicted on, compared to a 97% level of accuracy for the training data.  The model is able to generalize fairly well to unseen data.
 
 <p align="center"> 
     <img src="images/results.png" width=100% height=100% alt="pic of Accuracy/Precision/Recall/F1-Score results"/>
