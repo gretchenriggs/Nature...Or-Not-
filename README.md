@@ -1,5 +1,5 @@
 # Nature...Or Not?
-I've trained a convolutional neural network to discern between natural & and man-made structures in satellite images from around the globe (and extra-terrestrial globes).
+I've trained a convolutional neural network to recognize the presence of man-made structures in satellite images from around the globe (and extra-terrestrial globes).
 
 ## Table of Contents
 - [Motivation](#motivation)
