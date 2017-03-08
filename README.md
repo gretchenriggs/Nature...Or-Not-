@@ -11,7 +11,7 @@ I've trained a convolutional neural network to recognize the presence of man-mad
 - [Next Steps](#next-steps)
 
 <p align="center">
-    <img src="images/Labeling_Nat_or_Not.gif" width=100% height=100% alt="Image Predictions gif"/> 
+    <img src="images/nature_not.gif" width=100% height=100% alt="Image Predictions gif"/> 
 </p>
 
 ## Motivation
