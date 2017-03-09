@@ -116,10 +116,6 @@ To test this idea, I captured some images from Google Mars and Google Moon to se
 
 ...well...it still remains to be seen.  The Earth-prediction model could only predict about 50% of the images from the Moon and Mars as natural.  This is most likely because of the gray scale images attained and perhaps because of the many regular-appearing crater shapes.  Or, could it be that aliens do inhabit these nearby celestial bodies??  Dun, dun, dunnnn...
 
-More close to home, I also ran a subset of images from Rocky Mountain National Park through the prediction to get an estimate of how much of the Park contained man-made structure.
-
---> Post results of Rocky Mtn Nat'l Park
-
 ## Next Steps
 Now that I've created a model to predict a binary classification for satellite images, I'd like to go deeper and try to classify portions of the images as natural vs. man-made.
 
