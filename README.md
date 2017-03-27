@@ -63,8 +63,7 @@ The convolutional neural network (CNN) can learn that hard fixed lines and shape
 
 Here's the CNN I've built to detect these features in my extracted images:
 
-<img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/> 
-<img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
+<img src="images/cnn_arch_pt1.png" width=85% height=85% alt="CNN Architecture gif"/><img src="images/cnn_arch_pt2.png" width=120 height=255 alt="CNN Architecture gif"/> 
 
 My CNN starts of with Input Layer being convolved with 32-3x3 filters in the CNN's first convolutional layer to create 32 feature maps. 
 The activation function RELU (Rectified Linear Unit), which takes any negative values and maps them to 0, is then applied.
